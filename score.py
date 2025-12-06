@@ -5,7 +5,7 @@ class Score(Turtle):
         super().__init__()
         self.color("white")
         self.penup()
-        self.goto(0,280)
+        self.goto(0,325)
         self.hideturtle()
         self.score = 0
         self.write(f"Score : {self.score} ", align="center", font=("Courier New",24,"normal"))
