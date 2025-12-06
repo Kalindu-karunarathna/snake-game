@@ -5,6 +5,8 @@ from food import Food
 from score import Score
 import winsound
 
+
+#create the game window
 screen = Screen()
 screen.setup(width=750,height=750)
 screen.bgcolor("black")
@@ -12,6 +14,7 @@ screen.title("Snake Game")
 screen.tracer(0)
 
 
+#create the border
 border = Turtle()
 border.penup()
 border.goto(300,-300)
@@ -24,23 +27,26 @@ for i in range(4):
     border.forward(600)
 
 
-
-
+#create objects for imported classes
 snake = Snake()
 food = Food()
+score = Score()
 
 
+#snake responses for key presses
 screen.listen()
 screen.onkey(snake.up,"Up")
 screen.onkey(snake.down,"Down")
 screen.onkey(snake.left,"Left")
 screen.onkey(snake.right,"Right")
 
-score = Score()
-
 
 is_game_on =True
 
+#this while loop execute the game until snake hit the wall or its own tail.
+#if statements with score use to increase the speed of the snake according to score.
+#sanke.move() use to move the snake continuously.
+#if statements with snake.segments[0] use to detect snake collision with food,border and its own tail
 while is_game_on:
     screen.update()
     if score.score<=5:
@@ -75,10 +81,6 @@ while is_game_on:
             winsound.PlaySound("sounds/game_over.wav", winsound.SND_ASYNC)
             is_game_on=False
             score.game_over()
-
-
-
-
 
 
 screen.exitonclick()

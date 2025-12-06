@@ -1,6 +1,8 @@
 from turtle import Turtle
 import random
 
+#Food class use to create snake food on random locations
+#refresh method locate each new food randomly
 class Food(Turtle):
     def __init__(self):
         super().__init__()

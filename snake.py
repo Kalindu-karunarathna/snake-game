@@ -7,6 +7,11 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
+
+#snake class use to create snake on the starting position when game starts,
+#move method use to move the snake such that all the segments follow the 1 segment which act like head
+#extend method use to increase the length of snake when eat food
+#up,down.left,right methods use to turn the snake base on the key press by the user.
 class Snake:
     def __init__(self):
         self.starting_positions= STARTING_POSITIONS
@@ -37,7 +42,6 @@ class Snake:
         x_coordinate = self.segments[len(self.segments)-1].xcor()
         y_coordinate = self.segments[len(self.segments) - 1].ycor()
         snake.goto(x_coordinate,y_coordinate)
-
         self.segments.append(snake)
 
     def up(self):

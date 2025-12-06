@@ -1,5 +1,7 @@
 from turtle import Turtle
 
+#score class use to calculate the score and display it,
+#and finally display the 'Game Over!' when the snake collide.
 class Score(Turtle):
     def __init__(self):
         super().__init__()
