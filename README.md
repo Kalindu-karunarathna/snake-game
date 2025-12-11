@@ -26,3 +26,33 @@ A classic Snake game built using Python's Turtle module. The snake moves around 
 - Eat the blue food to grow longer and increase your score.
 - Avoid hitting the walls or your own tail.
 
+
+
+
+## 🚀 How to Run the Game
+
+Follow the steps below to run the Snake Game on your computer:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Kalindu-karunarathna/snake-game
+```
+
+### 2. Navigate into the Project Folder
+```bash
+cd snake-game
+```
+
+### 3. Run the Game
+Make sure Python is installed on your system.
+
+Run the game with:
+```bash
+python main.py
+```
+
+### ✔ Requirements
+This project uses Python’s built-in **turtle** module.  
+No external packages are required.
+
+
