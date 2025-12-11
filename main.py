@@ -73,14 +73,13 @@ while is_game_on:
     if (snake.segments[0].xcor()>299 or  snake.segments[0].xcor()<-299 or
             snake.segments[0].ycor()>299 or snake.segments[0].ycor()<-299):
         winsound.PlaySound("sounds/game_over.wav", winsound.SND_ASYNC)
-        is_game_on=False
-        score.game_over()
+        score.reset()
+        snake.reset()
 
     for segment in snake.segments[1:]:
         if snake.segments[0].distance(segment)<10:
             winsound.PlaySound("sounds/game_over.wav", winsound.SND_ASYNC)
-            is_game_on=False
-            score.game_over()
-
+            score.reset()
+            snake.reset()
 
 screen.exitonclick()
